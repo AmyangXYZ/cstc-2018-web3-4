@@ -6,7 +6,7 @@
 
 1. 手机端（或改ua）打开钓鱼页(也可直接抓包看js去，但是钓鱼的前端我们就白伪造了)
 
-2. 抓包看http历史，得到evil js和真实钓鱼网站（可参考（[从钓鱼样本到某大厂存储型XSS](https://xz.aliyun.com/t/2322)或[Anatomy of a Phishing Attack Sample](https://amyang.xyz/posts/Anatomy-of-a-Phishing-Attack-Sample)））
+2. 抓包看http历史，得到evil js和真实钓鱼网站（可参考（[从钓鱼样本到某大厂存储型XSS](http://www.k0rz3n.com/2018/04/29/%E4%BB%8E%E9%92%93%E9%B1%BC%E6%A0%B7%E6%9C%AC%E5%88%B0%E6%9F%90%E5%A4%A7%E5%8E%82%E5%AD%98%E5%82%A8%E5%9E%8BXSS/)或[Anatomy of a Phishing Attack Sample](https://amyang.xyz/posts/Anatomy-of-a-Phishing-Attack-Sample)））
 
 3. 解密evil js知道钓鱼思路并获得des加密的key（前端加密数据包）
 
