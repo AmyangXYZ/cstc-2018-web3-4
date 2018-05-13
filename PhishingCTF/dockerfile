@@ -1,0 +1,8 @@
+FROM alpine
+
+ADD server /server
+ADD templates/ /templates
+ADD static/ /static
+ADD evil.js /evil.js
+
+CMD ["/server"]

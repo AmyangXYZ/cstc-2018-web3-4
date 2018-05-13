@@ -1,0 +1,35 @@
+{{ define "stepping-index" }}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>小明的博客</title>
+        <script src="/static/jquery-3.1.1.min.js"></script>
+    </head>
+    
+    <body>
+        <h1>小明坚信xss不能getshell</h1>
+        Msg: <input type=text id="msg" />
+        <button type="button" id="sendBtn">Send</button>
+        <script>
+            $(function() {
+                $("#sendBtn").click(function (e) {
+                    e.preventDefault();
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/msg",
+                        data: {"msg":$("#msg").val()},
+                        dataType: "JSON",
+                    }).done(function(){    
+                        alert("Sent")
+                    });
+                });
+            });
+        </script>
+    
+    </body>
+    
+</html>
+
+{{ end }}

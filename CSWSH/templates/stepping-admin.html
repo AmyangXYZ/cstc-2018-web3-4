@@ -1,0 +1,37 @@
+{{ define "stepping-admin" }}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSWSH-Stepping-Admin</title>
+        <script src="/static/jquery-3.1.1.min.js"></script>
+        <script>window.alert = function(str) {  
+            return ;  
+              }  </script>
+    </head>
+    
+    <body>
+        <h1>evilJS are here</h1>
+        <div id="container"></div>
+        <script>
+            $(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "/api/msg",
+                    dataType: "json",
+                    success:function(result) {
+                        msgs=result.data.msgs;
+                        for (var i=0; i<msgs.length; i++) {
+                            console.log(msgs[i])
+                            h = "<p>"+msgs[i]+"</p>",
+                            $("#container").html(h);
+                        }
+                    }
+                });              
+            });       
+            
+    
+        </script>
+    </body>
+</html>
+{{ end }}
